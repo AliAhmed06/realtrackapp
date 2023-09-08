@@ -44,16 +44,18 @@ const HomePage = () => {
       </motion.div>
 
       {/* clients portion */}
-      <motion.div
+      <motion.div      
         initial="hide"
         whileInView="show"
         variants={b_t_animation}
-        className="flex flex-col lg:flex-row gap-10 items-center justify-center mt-[-100px] pb-20"
+        className="flex flex-col items-center justify-center "
       >
-        <img src="/images/client2.png" alt="" className="h-[80px]" />
-        <img src="/images/client1.png" alt="" className="h-[80px]" />
-        <img src="/images/client2.png" alt="" className="h-[80px]" />
-        <img src="/images/client1.png" alt="" className="h-[80px]" />
+        <h4 className="font-bold text-4xl">Joint Venture</h4>
+        <div className="flex flex-col lg:flex-row gap-10 items-center justify-center pb-20 mt-20">
+          <img src="/images/client2.png" alt="" className="h-[80px]" />
+          <img src="/images/client1.png" alt="" className="h-[80px]" />        
+        </div>
+
       </motion.div>
 
       {/* Features Section */}
@@ -201,7 +203,7 @@ const HomePage = () => {
       </motion.div>
 
       {/* Testomonials Section */}
-      <motion.div
+      {/* <motion.div
         initial="hide"
         whileInView="show"
         variants={b_t_animation}
@@ -211,7 +213,7 @@ const HomePage = () => {
         <div className="mx-auto w-[95%] lg:w-[80%]">
           <Testimonials />
         </div>
-      </motion.div>
+      </motion.div> */}
 
       {/* Frequently asked Section */}
       <motion.div
