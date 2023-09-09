@@ -40,7 +40,7 @@ const HomePage = () => {
               Unlock the Future of Real Estate Development with RealSolutions
               <br />
             </span>
-            Whether you're scaling up your real estate business or just getting
+            Whether you are scaling up your real estate business or just getting
             started, the digital landscape can be overwhelming. RealSolutions
             simplifies and amplifies every aspect of your real estate journey,
             bringing the world of property development to your fingertips.
@@ -146,8 +146,8 @@ const HomePage = () => {
             <h4 className="font-bold text-xl">Developed by Experts</h4>
             <p className="mt-5 text-[#7E92AC]">
               Who knows real estate developers better than fellow developers?
-              We've been in your shoes, and we've designed this platform to
-              address every challenge we've faced.
+              We have been in your shoes, and we have designed this platform to
+              address every challenge we have faced.
             </p>
           </div>
 
@@ -160,7 +160,7 @@ const HomePage = () => {
             <h4 className="font-bold text-xl">All-in-One Solution</h4>
             <p className="mt-5 text-[#7E92AC]">
               Why juggle multiple tools when you can have everything under one
-              roof? From marketing to customer management, we've packed
+              roof? From marketing to customer management, we have packed
               everything you need in one intuitive platform.
             </p>
           </div>
@@ -361,7 +361,7 @@ const HomePage = () => {
               <img src="/images/tick.png" alt="" />
               <p className="lg:w-[400px] mt-[-20px]">
                 Implement effective search engine optimization strategies to
-                improve your website's visibility in search results.
+                improve your websites visibility in search results.
               </p>
             </div>
             <div className="flex items-center pb-10">
@@ -603,7 +603,7 @@ const HomePage = () => {
               </h4>
               <p className="text-[#7E92AC] text-sm mt-3">
                 We have a team of marketing experts who specialize in the real
-                estate industry. Please contact us for more details if you're
+                estate industry. Please contact us for more details if you are
                 interested in these services.
               </p>
             </div>
@@ -643,7 +643,7 @@ const HomePage = () => {
             <div>
               <h4 className="font-bold text-xl">Have more questions?</h4>
               <p className="text-[#7E92AC] text-sm mt-3">
-                Don't hesitate to [Contact Us]! We're here to assist and ensure
+                Don not hesitate to [Contact Us]! We are here to assist and ensure
                 you make the most out of RealTrack.
               </p>
             </div>
