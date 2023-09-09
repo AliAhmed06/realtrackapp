@@ -6,7 +6,7 @@ connect();
 export async function GET(NextRequest){
     try {
         const contacts = await Contact.find(); 
-        console.log("yes 1")
+        // console.log("yes 1")
         return NextResponse.json({
           message: "",
           contacts,
