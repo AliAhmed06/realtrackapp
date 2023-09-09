@@ -78,7 +78,7 @@ const HomePage = () => {
         <h4 className="text-3xl text-center">
           It is a joint effort of{" "}
           <span className="font-bold">Dayim Marketing</span> and{" "}
-          <span className="font-bold">Global Bussiness Concern</span>
+          <span className="font-bold">Global Business Concern</span>
         </h4>
         <div className="flex flex-col lg:flex-row gap-10 items-center justify-center pb-20 mt-20">
           <img src="/images/client2.png" alt="" className="h-[80px]" />
