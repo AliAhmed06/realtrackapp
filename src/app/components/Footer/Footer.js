@@ -25,7 +25,7 @@ const Footer = () => {
             </div>
             
             <div className='flex flex-col gap-4'>
-                <h4 className='font-semibold text-2xl text-black'>Subscribe Our Newsletter</h4>
+                <h4 className='font-semibold text-2xl text-black'>Subscribe to Our Newsletter</h4>
                 <div className='flex flex-col md:flex-row'>
                     <input 
                         type="text" 

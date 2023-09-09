@@ -10,6 +10,7 @@ import RealEstateInventory from "../../public/lootieAnimations/real-estate-inven
 import OnlinePayments from "../../public/lootieAnimations/online-payments.json";
 
 import Link from "next/link";
+import ContactForm from "./components/ContactForm";
 
 const HomePage = () => {
   const b_t_animation = {
@@ -32,19 +33,20 @@ const HomePage = () => {
       {/* top portion */}
       <div className="bg-[url('/images/Mask.png')] h-[700px] bg-cover bg-no-repeat bg-bottom flex items-center justify-center p-5">
         <div className="lg:mt-[-180px] flex flex-col items-center gap-5 text-white">
-          <h2 className="font-bold text-3xl">
+          <h2 className="font-bold text-3xl  text-center">
             RealSolutions: Designed by Developers, For Developers
           </h2>
-          <p className="text-center w-[50%]">
+          <p className="text-center lg:w-[50%]">
             <span className="text-xl font-bold">
               Unlock the Future of Real Estate Development with RealSolutions
               <br />
-            </span>
+            </span>            
+          </p>
+          <p className="text-center lg:w-[50%]">
             Whether you are scaling up your real estate business or just getting
             started, the digital landscape can be overwhelming. RealSolutions
             simplifies and amplifies every aspect of your real estate journey,
-            bringing the world of property development to your fingertips.
-          </p>
+            bringing the world of property development to your fingertips.</p>
           <Link
             href="#inquirySection"
             className="bg-yellow-500 py-3 px-8 rounded-md hover:bg-opacity-80"
@@ -60,7 +62,7 @@ const HomePage = () => {
         whileInView="show"
         viewport={{ once: true }}
         variants={b_t_animation}
-        className="flex items-center justify-center mt-[-150px] lg:mt-[-300px]"
+        className="flex items-center justify-center mt-[-80px] md:mt-[-150px] lg:mt-[-300px]"
       >
         <img src="/images/main1.png" alt="" className="h-[600px]" />
       </motion.div>
@@ -73,7 +75,7 @@ const HomePage = () => {
         variants={b_t_animation}
         className="flex flex-col items-center justify-center "
       >
-        <h4 className="text-3xl">
+        <h4 className="text-3xl text-center">
           It is a joint effort of{" "}
           <span className="font-bold">Dayim Marketing</span> and{" "}
           <span className="font-bold">Global Bussiness Concern</span>
@@ -669,35 +671,11 @@ const HomePage = () => {
         className="p-5 md:p-20 flex flex-col items-center justify-center gap-5"
       >
         <h4 className="font-bold text-4xl">Drop A Message For Inquiry</h4>
-        <p className="text-[#7E92AC] lg:w-[480px] text-center">
+        {/* <p className="text-[#7E92AC] lg:w-[480px] text-center">
           Donec tempor finibus ante ac luctus. Fusce facilisis nisi vel odio
           tincidunt maximus. Pellentesque tempus gravida viverra.
-        </p>
-        <div className="w-full md:w-[400px] lg:w-[500px] mt-5 flex flex-col gap-6 ">
-          <input
-            type="text"
-            className="w-full outline-none border border-gray-300 py-3 px-5 rounded-md focus:border-yellow-500 bg-gray-50"
-            placeholder="Name"
-          />
-          <input
-            type="email"
-            className="w-full outline-none border border-gray-300 py-3 px-5 rounded-md focus:border-yellow-500 bg-gray-50"
-            placeholder="Email"
-          />
-          <input
-            type="number"
-            className="w-full outline-none border border-gray-300 py-3 px-5 rounded-md focus:border-yellow-500 bg-gray-50"
-            placeholder="Phone"
-          />
-          <textarea
-            className="w-full outline-none border border-gray-300 py-3 px-5 rounded-md focus:border-yellow-500 bg-gray-50 h-[200px]"
-            placeholder="Name"
-          ></textarea>
-
-          <button className="bg-yellow-500 py-3 px-8 text-white rounded-md hover:bg-opacity-80 mx-auto">
-            SEND MESSAGE
-          </button>
-        </div>
+        </p> */}
+        <ContactForm />
       </motion.div>
 
       {/* Ready to get started reverse section */}
