@@ -7,7 +7,7 @@ const getData = async () => {
     // return resposne.data.contacts;
 
     let response = await fetch(`${process.env.DOMAIN}/api/contacts`, { cache: 'no-store' });
-    response = await response.json();
+    // response = await response.json();
     return response.contacts;
 }
 
