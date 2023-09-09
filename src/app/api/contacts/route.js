@@ -4,7 +4,7 @@ import connectDB from "@/dbConfig/dbConfig";
 
 connectDB();
 
-export const dynamic = 'force-dynamic';
+// export const dynamic = 'force-dynamic';
 export async function GET(NextRequest){
     try {
         const contacts = await Contact.find(); 
