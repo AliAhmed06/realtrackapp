@@ -1,19 +1,21 @@
+"use client";
 import axios from 'axios'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 
 
-const getData = async () => {
-    const resposne = await axios.get(`${process.env.DOMAIN}api/contacts`);
-    return resposne.data.contacts;
-
-    // let response = await fetch(`${process.env.DOMAIN}api/contacts`, { next: { revalidate: 1 } });
-    // response = await response.json();
-    // return response.contacts;
-}
-
-const LeadsPage = async () => {
-    const data = await getData();
-    console.log("ali", data);
+const LeadsPage = () => {
+  const [data, setData] = useState([]);
+  
+  async function getData (){
+    const resposne = await axios.get(`/api/contacts`);
+    // return resposne.data.contacts;
+    setData(resposne.data.contacts);
+  }
+  useEffect(() => {
+    getData();
+  }, [])
+  
+  console.log(data);
   return (
     <div className="min-h-[500px] w-full flex items-center justify-center text-black py-10 overflow-hidden   ">
     <div className="overflow-auto border border-black">
