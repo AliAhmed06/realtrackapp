@@ -34,17 +34,17 @@ const HomePage = () => {
       <div className="bg-[url('/images/Mask.png')] h-[700px] bg-cover bg-no-repeat bg-bottom flex items-center justify-center p-5">
         <div className="lg:mt-[-180px] flex flex-col items-center gap-5 text-white">
           <h2 className="font-bold text-3xl  text-center">
-            RealSolutions: Designed by Developers, For Developers
+            RealTrack: Designed by Developers, For Developers
           </h2>
           <p className="text-center lg:w-[50%]">
             <span className="text-xl font-bold">
-              Unlock the Future of Real Estate Development with RealSolutions
+              Unlock the Future of Real Estate Development with RealTrack
               <br />
             </span>            
           </p>
           <p className="text-center lg:w-[50%]">
             Whether you are scaling up your real estate business or just getting
-            started, the digital landscape can be overwhelming. RealSolutions
+            started, the digital landscape can be overwhelming. RealTrack
             simplifies and amplifies every aspect of your real estate journey,
             bringing the world of property development to your fingertips.</p>
           <Link
@@ -96,7 +96,7 @@ const HomePage = () => {
       >
         <div className="flex flex-col items-center justify-center gap-8 text-white mt-14">
           <h2 className="font-bold text-4xl">
-            Get Started with RealSolutions Today!
+            Get Started with RealTrack Today!
           </h2>
           <p className="lg:w-[50%] text-center">
             Sign up for a demo or contact our expert team for more information.
@@ -120,7 +120,7 @@ const HomePage = () => {
         variants={b_t_animation}
         className="bg-[#FBFCFE] flex flex-col items-center justify-center p-5 lg:p-20"
       >
-        <h2 className="font-bold text-4xl">Why Choose RealSolutions?</h2>
+        <h2 className="font-bold text-4xl">Why Choose RealTrack?</h2>
         {/* <p className="text-[#7E92AC] mt-5 lg:w-[500px] text-center text-sm">
           Below are some of the features that we are providing
         </p> */}
@@ -133,7 +133,7 @@ const HomePage = () => {
             />
             <h4 className="font-bold text-xl">Real Estate-Centric</h4>
             <p className="mt-5 text-[#7E92AC]">
-              Unlike generic platforms, RealSolutions is made specifically for
+              Unlike generic platforms, RealTrack is made specifically for
               the real estate industry. This means every tool, every feature is
               tailored to your needs.
             </p>
@@ -687,10 +687,9 @@ const HomePage = () => {
         className="bg-[url('/images/Mask3.png')] h-[450px] bg-cover bg-no-repeat bg-top p-5 flex items-end justify-center"
       >
         <div className="flex flex-col items-center justify-center gap-8 text-white">
-          <h2 className="font-bold text-4xl">Ready to Get Started</h2>
+          <h2 className="font-bold text-4xl">Get Started with RealTrack Today!</h2>
           <p className="lg:w-[50%] text-center">
-            Donec tempor finibus ante ac luctus. Fusce facilisis nisi vel odio
-            tincidunt maximus. Pellentesque tempus gravida viverra.
+            Sign up for a demo or contact our expert team for more information. Your next big project deserves the best digital partner.
           </p>
           <Link
             href="#inquirySection"
