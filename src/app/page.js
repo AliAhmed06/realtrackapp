@@ -46,6 +46,7 @@ const HomePage = () => {
       <motion.div
         initial="hide"
         whileInView="show"
+ viewport={{ once: true }}
         variants={b_t_animation}
         className="flex items-center justify-center mt-[-150px] lg:mt-[-300px]"
       >
@@ -56,6 +57,7 @@ const HomePage = () => {
       <motion.div      
         initial="hide"
         whileInView="show"
+ viewport={{ once: true }}
         variants={b_t_animation}
         className="flex flex-col items-center justify-center "
       >
@@ -72,6 +74,7 @@ const HomePage = () => {
       <motion.div
         initial="hide"
         whileInView="show"
+ viewport={{ once: true }}        
         variants={b_t_animation}
         className="bg-[#FBFCFE] flex flex-col items-center justify-center p-5 lg:p-20"
       >
@@ -129,6 +132,7 @@ const HomePage = () => {
       <motion.div
         initial="hide"
         whileInView="show"
+ viewport={{ once: true }}        
         variants={b_t_animation}
         className="bg-white flex flex-col md:flex-row items-center justify-center p-5 lg:p-20 gap-10 "
       >
@@ -155,6 +159,7 @@ const HomePage = () => {
       <motion.div
         initial="hide"
         whileInView="show"
+ viewport={{ once: true }}
         variants={b_t_animation}
         className="bg-[url('/images/Mask2.png')] h-[450px] bg-cover bg-no-repeat bg-bottom p-5"
       >
@@ -174,6 +179,7 @@ const HomePage = () => {
       <motion.div
         initial="hide"
         whileInView="show"
+ viewport={{ once: true }}
         variants={b_t_animation}
         className=" py-20"
       >
@@ -217,6 +223,7 @@ const HomePage = () => {
       <motion.div
         initial="hide"
         whileInView="show"
+ viewport={{ once: true }}
         variants={b_t_animation}
         className=" py-20 bg-[#FBFCFE]"
       >
@@ -260,6 +267,7 @@ const HomePage = () => {
       <motion.div
         initial="hide"
         whileInView="show"
+ viewport={{ once: true }}
         variants={b_t_animation}
         className=" py-20 bg-white"
       >
@@ -304,6 +312,7 @@ const HomePage = () => {
       <motion.div
         initial="hide"
         whileInView="show"
+ viewport={{ once: true }}
         variants={b_t_animation}
         className=" py-20 bg-[#FBFCFE]"
       >
@@ -345,6 +354,7 @@ const HomePage = () => {
       <motion.div
         initial="hide"
         whileInView="show"
+ viewport={{ once: true }}
         variants={b_t_animation}
         className=" py-20 bg-white"
       >
@@ -386,6 +396,7 @@ const HomePage = () => {
       <motion.div
         initial="hide"
         whileInView="show"
+ viewport={{ once: true }}
         variants={b_t_animation}
         className=" py-20 bg-[#FBFCFE]"
       >
@@ -427,6 +438,7 @@ const HomePage = () => {
       <motion.div
         initial="hide"
         whileInView="show"
+ viewport={{ once: true }}
         variants={b_t_animation}
         className=" py-20 bg-white"
       >
@@ -468,6 +480,7 @@ const HomePage = () => {
       {/* <motion.div
         initial="hide"
         whileInView="show"
+ viewport={{ once: true }}
         variants={b_t_animation}
         className="  bg-[#FBFCFE] px-0 py-10 lg:py-20 lg:px-20"
       >
@@ -481,6 +494,7 @@ const HomePage = () => {
       <motion.div
         initial="hide"
         whileInView="show"
+ viewport={{ once: true }}
         variants={b_t_animation}
         className="bg-[#FBFCFE] flex flex-col items-center justify-center p-5 lg:p-20"
       >
@@ -588,6 +602,7 @@ const HomePage = () => {
       <motion.div
         initial="hide"
         whileInView="show"
+ viewport={{ once: true }}
         variants={b_t_animation}
         className="p-5 md:p-20 flex flex-col items-center justify-center gap-5"
         
@@ -629,6 +644,7 @@ const HomePage = () => {
       <motion.div
         initial="hide"
         whileInView="show"
+ viewport={{ once: true }}
         variants={b_t_animation}
         className="bg-[url('/images/Mask3.png')] h-[450px] bg-cover bg-no-repeat bg-top p-5 flex items-end justify-center"
       >
