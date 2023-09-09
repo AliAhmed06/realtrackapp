@@ -686,7 +686,7 @@ const HomePage = () => {
         variants={b_t_animation}
         className="bg-[url('/images/Mask3.png')] h-[450px] bg-cover bg-no-repeat bg-top p-5 flex items-end justify-center"
       >
-        <div className="flex flex-col items-center justify-center gap-8 text-white">
+        <div className="flex flex-col items-center justify-center gap-8 text-white   ">
           <h2 className="font-bold text-4xl">Get Started with RealTrack Today!</h2>
           <p className="lg:w-[50%] text-center">
             Sign up for a demo or contact our expert team for more information. Your next big project deserves the best digital partner.
