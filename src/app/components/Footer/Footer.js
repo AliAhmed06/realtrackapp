@@ -1,6 +1,10 @@
 import Link from 'next/link'
 import React from 'react'
 import { CiLocationArrow1 } from 'react-icons/ci';
+import { BiLogoFacebook, BiLogoLinkedin  } from 'react-icons/bi';
+import { AiOutlineTwitter  } from 'react-icons/ai';
+
+
 
 
 const Footer = () => {
@@ -14,10 +18,10 @@ const Footer = () => {
             
             <div className='flex flex-col gap-4'>
                 <h4 className='font-semibold text-2xl text-black'>Quick Link</h4>
-                <Link href="#">Home</Link>
-                <Link href="#">Testimonail</Link>
-                <Link href="#">Features</Link>
-                <Link href="#">Contact Us</Link>                
+                <Link href="#homeSection">Home</Link>
+                {/* <Link href="#">Testimonail</Link> */}
+                <Link href="#featuresSection">Features</Link>
+                <Link href="#inquirySection">Contact Us</Link>                
             </div>
             
             <div className='flex flex-col gap-4'>
@@ -32,6 +36,11 @@ const Footer = () => {
                         SUBSCRIBE
                         <CiLocationArrow1 />
                     </button>
+                </div>
+                <div className='flex gap-3 mt-3'>
+                    <Link href="#" className='bg-[#5B2AEE] text-white h-[50px] w-[50px] rounded-full flex items-center justify-center hover:bg-opacity-80'><BiLogoFacebook size={30} /> </Link>
+                    <Link href="#" className='bg-[#5B2AEE] text-white h-[50px] w-[50px] rounded-full flex items-center justify-center hover:bg-opacity-80'><AiOutlineTwitter size={30} /> </Link>
+                    <Link href="#" className='bg-[#5B2AEE] text-white h-[50px] w-[50px] rounded-full flex items-center justify-center hover:bg-opacity-80'><BiLogoLinkedin size={30} /> </Link>
                 </div>
             </div>
         </div>

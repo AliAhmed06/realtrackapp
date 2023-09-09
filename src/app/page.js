@@ -2,6 +2,14 @@
 import React from "react";
 import Testimonials from "./components/sliders/Testimonials";
 import { motion } from "framer-motion";
+import LottieAnimation from "./components/LootieAnimations";
+import CustomerNotifacations from '../../public/lootieAnimations/customer-notification.json';
+import DigitalMarketing from '../../public/lootieAnimations/digital-marketing.json';
+import CustomerLedger from '../../public/lootieAnimations/customer-ledger.json';
+import RealEstateInventory from '../../public/lootieAnimations/real-estate-inventory.json';
+import Link from "next/link";
+
+
 
 const HomePage = () => {
   const b_t_animation = {
@@ -19,7 +27,8 @@ const HomePage = () => {
   };
 
   return (
-    <div>
+    <div className="scroll-smooth">
+      <div id="homeSection"></div>
       {/* top portion */}
       <div className="bg-[url('/images/Mask.png')] h-[700px] bg-cover bg-no-repeat bg-bottom flex items-center justify-center p-5">
         <div className="lg:mt-[-180px] flex flex-col items-center gap-5 text-white">
@@ -27,9 +36,9 @@ const HomePage = () => {
             Discover New Real Estate Solution
           </h2>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-          <button className="bg-yellow-500 py-3 px-8 rounded-md hover:bg-opacity-80">
+          <Link href="#inquirySection" className="bg-yellow-500 py-3 px-8 rounded-md hover:bg-opacity-80">
             GET IT NOW
-          </button>
+          </Link>
         </div>
       </div>
 
@@ -43,7 +52,7 @@ const HomePage = () => {
         <img src="/images/main1.png" alt="" className="h-[600px]" />
       </motion.div>
 
-      {/* clients portion */}
+      {/* Joint Venture portion */}
       <motion.div      
         initial="hide"
         whileInView="show"
@@ -59,6 +68,7 @@ const HomePage = () => {
       </motion.div>
 
       {/* Features Section */}
+      <div id="featuresSection"></div>
       <motion.div
         initial="hide"
         whileInView="show"
@@ -129,14 +139,15 @@ const HomePage = () => {
         />
         <div className=" space-y-5">
           <h4 className="text-3xl font-bold">Perfect Solution</h4>
-          <p className="lg:w-[450px]">
+          <p className="lg:w-[450px] pb-10">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus dui
             orci, sodales a pellentesque vel, pharetra quis elit. In scelerisque
             lacinia diam eget egestas. Etiam non dui eu felis vestibulum.
           </p>
-          <button className="bg-yellow-500 py-3 px-8 text-white rounded-md hover:bg-opacity-80">
+          
+          <Link href="#inquirySection" className="bg-yellow-500 py-3 px-8 text-white rounded-md hover:bg-opacity-80 ">
             GET IT NOW
-          </button>
+          </Link>
         </div>
       </motion.div>
 
@@ -153,9 +164,9 @@ const HomePage = () => {
             Donec tempor finibus ante ac luctus. Fusce facilisis nisi vel odio
             tincidunt maximus. Pellentesque tempus gravida viverra.
           </p>
-          <button className="bg-yellow-500 py-3 px-8 text-white rounded-md hover:bg-opacity-80">
+          <Link href="#inquirySection" className="bg-yellow-500 py-3 px-8 text-white rounded-md hover:bg-opacity-80">
             GET IT NOW
-          </button>
+          </Link>
         </div>
       </motion.div>
 
@@ -183,6 +194,35 @@ const HomePage = () => {
                 lacinia diam eget egestas.
               </p>
             </div>
+            <div className="flex items-center pb-10">
+              <img src="/images/tick.png" alt="" />
+              <p className="lg:w-[400px] mt-[-20px]">
+                Sodales a pellentesque vel, pharetra quis elit. In scelerisque
+                lacinia diam eget egestas.
+              </p>
+            </div>
+            <Link href="#inquirySection" className="bg-yellow-500 py-3 px-8 text-white rounded-md hover:bg-opacity-80">
+              GET IT NOW
+            </Link>
+          </div>
+          <img
+            src="/images/easilyInventory.png"
+            alt=""
+            className="md:w-[350px] lg:w-[600px]"
+          />
+        </div>
+      </motion.div>
+
+      {/* Company Website Section */}
+      <motion.div
+        initial="hide"
+        whileInView="show"
+        variants={b_t_animation}
+        className=" py-20 bg-[#FBFCFE]"
+      >
+        <div className="w-[90%] lg:w-[80%] mx-auto flex flex-col-reverse md:flex-row items-center justify-center gap-10">
+          <div className="">
+            <h4 className="font-bold text-3xl mb-5">Company Website</h4>
             <div className="flex items-center">
               <img src="/images/tick.png" alt="" />
               <p className="lg:w-[400px] mt-[-20px]">
@@ -190,15 +230,237 @@ const HomePage = () => {
                 lacinia diam eget egestas.
               </p>
             </div>
-            <button className="bg-yellow-500 py-3 px-8 text-white rounded-md hover:bg-opacity-80">
+            <div className="flex items-center">
+              <img src="/images/tick.png" alt="" />
+              <p className="lg:w-[400px] mt-[-20px]">
+                Sodales a pellentesque vel, pharetra quis elit. In scelerisque
+                lacinia diam eget egestas.
+              </p>
+            </div>
+            <div className="flex items-center pb-10">
+              <img src="/images/tick.png" alt="" />
+              <p className="lg:w-[400px] mt-[-20px]">
+                Sodales a pellentesque vel, pharetra quis elit. In scelerisque
+                lacinia diam eget egestas.
+              </p>
+            </div>
+            <Link href="#inquirySection" className="bg-yellow-500 py-3 px-8 text-white rounded-md hover:bg-opacity-80">
               GET IT NOW
-            </button>
+            </Link>
           </div>
           <img
-            src="/images/easilyInventory.png"
+            src="/images/CompanyWebsite.png"
             alt=""
             className="md:w-[350px] lg:w-[600px]"
           />
+        </div>
+      </motion.div>
+
+      {/* Project Webpages Section */}
+      <motion.div
+        initial="hide"
+        whileInView="show"
+        variants={b_t_animation}
+        className=" py-20 bg-white"
+      >
+        <div className="w-[90%] lg:w-[80%] mx-auto flex flex-col-reverse md:flex-row items-center justify-center gap-10">
+          <div className="">
+            <h4 className="font-bold text-3xl mb-5">Project Webpages</h4>
+            <div className="flex items-center">
+              <img src="/images/tick.png" alt="" />
+              <p className="lg:w-[400px] mt-[-20px]">
+                Sodales a pellentesque vel, pharetra quis elit. In scelerisque
+                lacinia diam eget egestas.
+              </p>
+            </div>
+            <div className="flex items-center">
+              <img src="/images/tick.png" alt="" />
+              <p className="lg:w-[400px] mt-[-20px]">
+                Sodales a pellentesque vel, pharetra quis elit. In scelerisque
+                lacinia diam eget egestas.
+              </p>
+            </div>
+            <div className="flex items-center pb-10" >
+              <img src="/images/tick.png" alt="" />
+              <p className="lg:w-[400px] mt-[-20px]">
+                Sodales a pellentesque vel, pharetra quis elit. In scelerisque
+                lacinia diam eget egestas.
+              </p>
+            </div>
+            <Link href="#inquirySection" className="bg-yellow-500 py-3 px-8 text-white rounded-md hover:bg-opacity-80">
+              GET IT NOW
+            </Link>
+          </div>
+          <img
+            src="/images/project-webpages.png"
+            alt=""
+            className="md:w-[350px] lg:w-[600px]"
+          />
+        </div>
+      </motion.div>
+
+
+      {/* Customer Notifacations Section */}
+      <motion.div
+        initial="hide"
+        whileInView="show"
+        variants={b_t_animation}
+        className=" py-20 bg-[#FBFCFE]"
+      >
+        <div className="w-[90%] lg:w-[80%] mx-auto flex flex-col-reverse md:flex-row items-center justify-center gap-10">
+          <div className="">
+            <h4 className="font-bold text-3xl mb-5">Customer Notifacations</h4>
+            <div className="flex items-center">
+              <img src="/images/tick.png" alt="" />
+              <p className="lg:w-[400px] mt-[-20px]">
+                Sodales a pellentesque vel, pharetra quis elit. In scelerisque
+                lacinia diam eget egestas.
+              </p>
+            </div>
+            <div className="flex items-center">
+              <img src="/images/tick.png" alt="" />
+              <p className="lg:w-[400px] mt-[-20px]">
+                Sodales a pellentesque vel, pharetra quis elit. In scelerisque
+                lacinia diam eget egestas.
+              </p>
+            </div>
+            <div className="flex items-center pb-10">
+              <img src="/images/tick.png" alt="" />
+              <p className="lg:w-[400px] mt-[-20px]">
+                Sodales a pellentesque vel, pharetra quis elit. In scelerisque
+                lacinia diam eget egestas.
+              </p>
+            </div>
+            <Link href="#inquirySection" className="bg-yellow-500 py-3 px-8 text-white rounded-md hover:bg-opacity-80">
+              GET IT NOW
+            </Link>
+          </div>
+          <div className="lg:w-[50%]">
+            <LottieAnimation animationData={CustomerNotifacations} />
+          </div>
+        </div>
+      </motion.div>
+
+      {/* Digital Marketing Section */}
+      <motion.div
+        initial="hide"
+        whileInView="show"
+        variants={b_t_animation}
+        className=" py-20 bg-white"
+      >
+        <div className="w-[90%] lg:w-[80%] mx-auto flex flex-col-reverse md:flex-row items-center justify-center gap-10">
+          <div className="">
+            <h4 className="font-bold text-3xl mb-5">Digital Marketing</h4>
+            <div className="flex items-center">
+              <img src="/images/tick.png" alt="" />
+              <p className="lg:w-[400px] mt-[-20px]">
+                Sodales a pellentesque vel, pharetra quis elit. In scelerisque
+                lacinia diam eget egestas.
+              </p>
+            </div>
+            <div className="flex items-center">
+              <img src="/images/tick.png" alt="" />
+              <p className="lg:w-[400px] mt-[-20px]">
+                Sodales a pellentesque vel, pharetra quis elit. In scelerisque
+                lacinia diam eget egestas.
+              </p>
+            </div>
+            <div className="flex items-center pb-10">
+              <img src="/images/tick.png" alt="" />
+              <p className="lg:w-[400px] mt-[-20px]">
+                Sodales a pellentesque vel, pharetra quis elit. In scelerisque
+                lacinia diam eget egestas.
+              </p>
+            </div>
+            <Link href="#inquirySection" className="bg-yellow-500 py-3 px-8 text-white rounded-md hover:bg-opacity-80">
+              GET IT NOW
+            </Link>
+          </div>
+          <div className="">
+            <LottieAnimation animationData={DigitalMarketing} />
+          </div>
+        </div>
+      </motion.div>
+
+      {/* Customers Ledger Section */}
+      <motion.div
+        initial="hide"
+        whileInView="show"
+        variants={b_t_animation}
+        className=" py-20 bg-[#FBFCFE]"
+      >
+        <div className="w-[90%] lg:w-[80%] mx-auto flex flex-col-reverse md:flex-row items-center justify-center gap-10">
+          <div className="">
+            <h4 className="font-bold text-3xl mb-5">Customers Ledger</h4>
+            <div className="flex items-center">
+              <img src="/images/tick.png" alt="" />
+              <p className="lg:w-[400px] mt-[-20px]">
+                Sodales a pellentesque vel, pharetra quis elit. In scelerisque
+                lacinia diam eget egestas.
+              </p>
+            </div>
+            <div className="flex items-center">
+              <img src="/images/tick.png" alt="" />
+              <p className="lg:w-[400px] mt-[-20px]">
+                Sodales a pellentesque vel, pharetra quis elit. In scelerisque
+                lacinia diam eget egestas.
+              </p>
+            </div>
+            <div className="flex items-center pb-10">
+              <img src="/images/tick.png" alt="" />
+              <p className="lg:w-[400px] mt-[-20px]">
+                Sodales a pellentesque vel, pharetra quis elit. In scelerisque
+                lacinia diam eget egestas.
+              </p>
+            </div>
+            <Link href="#inquirySection" className="bg-yellow-500 py-3 px-8 text-white rounded-md hover:bg-opacity-80">
+              GET IT NOW
+            </Link>
+          </div>
+          <div className="lg:w-[40%]">
+            <LottieAnimation animationData={CustomerLedger} />
+          </div>
+        </div>
+      </motion.div>
+
+      {/* Real Estate Inventory Section */}
+      <motion.div
+        initial="hide"
+        whileInView="show"
+        variants={b_t_animation}
+        className=" py-20 bg-white"
+      >
+        <div className="w-[90%] lg:w-[80%] mx-auto flex flex-col-reverse md:flex-row items-center justify-center gap-10">
+          <div className="">
+            <h4 className="font-bold text-3xl mb-5">Real Estate Inventory</h4>
+            <div className="flex items-center">
+              <img src="/images/tick.png" alt="" />
+              <p className="lg:w-[400px] mt-[-20px]">
+                Sodales a pellentesque vel, pharetra quis elit. In scelerisque
+                lacinia diam eget egestas.
+              </p>
+            </div>
+            <div className="flex items-center">
+              <img src="/images/tick.png" alt="" />
+              <p className="lg:w-[400px] mt-[-20px]">
+                Sodales a pellentesque vel, pharetra quis elit. In scelerisque
+                lacinia diam eget egestas.
+              </p>
+            </div>
+            <div className="flex items-center pb-10">
+              <img src="/images/tick.png" alt="" />
+              <p className="lg:w-[400px] mt-[-20px]">
+                Sodales a pellentesque vel, pharetra quis elit. In scelerisque
+                lacinia diam eget egestas.
+              </p>
+            </div>
+            <Link href="#inquirySection" className="bg-yellow-500 py-3 px-8 text-white rounded-md hover:bg-opacity-80">
+              GET IT NOW
+            </Link>
+          </div>
+          <div className="lg:w-[40%]">
+            <LottieAnimation animationData={RealEstateInventory} />
+          </div>
         </div>
       </motion.div>
 
@@ -322,13 +584,16 @@ const HomePage = () => {
       </motion.div>
 
       {/* Inquiry Section */}
+      <div id="inquirySection"></div>
       <motion.div
         initial="hide"
         whileInView="show"
         variants={b_t_animation}
         className="p-5 md:p-20 flex flex-col items-center justify-center gap-5"
+        
+
       >
-        <h4 className="font-bold text-4xl">Drop A Message For Inquiry</h4>
+        <h4 className="font-bold text-4xl" >Drop A Message For Inquiry</h4>
         <p className="text-[#7E92AC] lg:w-[480px] text-center">
           Donec tempor finibus ante ac luctus. Fusce facilisis nisi vel odio
           tincidunt maximus. Pellentesque tempus gravida viverra.
@@ -373,9 +638,9 @@ const HomePage = () => {
             Donec tempor finibus ante ac luctus. Fusce facilisis nisi vel odio
             tincidunt maximus. Pellentesque tempus gravida viverra.
           </p>
-          <button className="bg-yellow-500 py-3 px-8 text-white rounded-md hover:bg-opacity-80">
+          <Link href="#inquirySection" className="bg-yellow-500 py-3 px-8 text-white rounded-md hover:bg-opacity-80">
             GET IT NOW
-          </button>
+          </Link>
         </div>
       </motion.div>
     </div>

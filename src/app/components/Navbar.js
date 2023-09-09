@@ -32,7 +32,7 @@ function NavBar({videoBg}) {
   
   return (
     <div>
-      <nav className={`w-full fixed top-0 left-0 z-50 ${navbar ? "bg-[#6e3ef2] " : "bg-[#6e3ef2] " } ${videoBg == false && 'bg-[#6e3ef2] shadow-md text-black'} ${isScroll && 'bg-[#6e3ef2] shadow-md'} `}>
+      <nav className={`w-full absolute top-0 left-0`}>
         <div className="justify-between px-4 mx-auto lg:max-w-7xl md:items-center md:flex md:px-8">
           <div>
             <div className="flex items-center justify-between  md:block">
@@ -61,7 +61,7 @@ function NavBar({videoBg}) {
                 navbar ? 'p-12 md:p-0 block' : 'hidden'
               }`}
             >
-              <ul className="h-screen md:h-auto items-center justify-center md:flex  pt-2 ">                
+              {/* <ul className="h-screen md:h-auto items-center justify-center md:flex  pt-2 ">                
                 <li className={`${navbar ? 'text-white' : isScroll ? 'text-white' : videoBg == false ? 'text-white' : 'text-white' } pb-6  uppercase text-md font-semibold hover:underline ${pathname == "/about" && "underline"} py-2 md:px-6 text-center border-b-2 md:border-b-0     md:hover:text-gray-200 md:hover:bg-transparent`}>
                     <Link href="#" onClick={() => setNavbar(!navbar)}>
                         About
@@ -81,9 +81,7 @@ function NavBar({videoBg}) {
                        top-10 left-5 bg-white text-black w-[250px] min-h-[50px] text-start flex flex-col rounded-md overflow-hidden md:border md:border-second
                        md:absolute 
                   `}>
-                    {/* <Link href="/about" className='text-xs  bg-white w-full h-[50px] flex items-center px-2 hover:bg-second hover:text-white border-b border-gray'>Our Details</Link>                    
-                    <Link href="/team" className='text-xs  bg-white w-full h-[50px] flex items-center px-2 hover:bg-second hover:text-white border-b border-gray'>Our Team</Link>                    
-                    <Link href="/contact" className='text-xs  bg-white w-full h-[50px] flex items-center px-2 hover:bg-second hover:text-white border-b border-gray'>Contact Us</Link>                     */}
+                    
                   </div>
                 </li>
                 
@@ -99,11 +97,11 @@ function NavBar({videoBg}) {
                     </Link>
                 </li>
 
-              </ul>
+              </ul> */}
             </div>
           </div>
           <div className='hidden md:block'>
-            <button className='bg-[#5d32d2] py-2 px-5 rounded-md hover:bg-opacity-80 text-white'>Register</button>
+            <Link href="#inquirySection" className='bg-[#5d32d2] py-2 px-5 rounded-md hover:bg-opacity-80 text-white'>Register</Link>
           </div>
         </div>
       </nav>
