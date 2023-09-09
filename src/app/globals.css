@@ -1,3 +1,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.table{
+    @apply border border-black overflow-auto
+}
+
+.table tr,th,td{
+    @apply border border-black text-center
+}
+
+.table th,td{
+    @apply py-2 px-5 
+ }
