@@ -13,7 +13,7 @@ const Footer = () => {
         <div className='lg:w-[70%] mx-auto grid grid-cols-1 lg:grid-cols-3 text-[#7E92AC] gap-14'>
             <div className='space-y-4'>
                 <h4 className='font-semibold text-2xl text-black'>About Real Track</h4>
-                <p className='text-justify'>Aliquam fermentum tellus vitae nisl dictum vel sodales diam molestie. Pellentesque nec orci posuere, feugiat quam sed. Nam tincidunt lectus quis nibh ultrices, vitae congue risus porta mauris eros.</p>
+                <p className='text-justify'>We are the driving force behind real estate success! Explore our game changing tools for seamless financials, project mastery, and instant property insight. Join us and reshape the future of real estate</p>
             </div>
             
             <div className='flex flex-col gap-4'>

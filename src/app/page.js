@@ -3,13 +3,13 @@ import React from "react";
 import Testimonials from "./components/sliders/Testimonials";
 import { motion } from "framer-motion";
 import LottieAnimation from "./components/LootieAnimations";
-import CustomerNotifacations from '../../public/lootieAnimations/customer-notification.json';
-import DigitalMarketing from '../../public/lootieAnimations/digital-marketing.json';
-import CustomerLedger from '../../public/lootieAnimations/customer-ledger.json';
-import RealEstateInventory from '../../public/lootieAnimations/real-estate-inventory.json';
+import CustomerNotifacations from "../../public/lootieAnimations/customer-notification.json";
+import DigitalMarketing from "../../public/lootieAnimations/digital-marketing.json";
+import CustomerLedger from "../../public/lootieAnimations/customer-ledger.json";
+import RealEstateInventory from "../../public/lootieAnimations/real-estate-inventory.json";
+import OnlinePayments from "../../public/lootieAnimations/online-payments.json";
+
 import Link from "next/link";
-
-
 
 const HomePage = () => {
   const b_t_animation = {
@@ -32,11 +32,23 @@ const HomePage = () => {
       {/* top portion */}
       <div className="bg-[url('/images/Mask.png')] h-[700px] bg-cover bg-no-repeat bg-bottom flex items-center justify-center p-5">
         <div className="lg:mt-[-180px] flex flex-col items-center gap-5 text-white">
-          <h2 className="font-bold text-4xl">
-            Discover New Real Estate Solution
+          <h2 className="font-bold text-3xl">
+            RealSolutions: Designed by Developers, For Developers
           </h2>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-          <Link href="#inquirySection" className="bg-yellow-500 py-3 px-8 rounded-md hover:bg-opacity-80">
+          <p className="text-center w-[50%]">
+            <span className="text-xl font-bold">
+              Unlock the Future of Real Estate Development with RealSolutions
+              <br />
+            </span>
+            Whether you're scaling up your real estate business or just getting
+            started, the digital landscape can be overwhelming. RealSolutions
+            simplifies and amplifies every aspect of your real estate journey,
+            bringing the world of property development to your fingertips.
+          </p>
+          <Link
+            href="#inquirySection"
+            className="bg-yellow-500 py-3 px-8 rounded-md hover:bg-opacity-80"
+          >
             GET IT NOW
           </Link>
         </div>
@@ -46,7 +58,7 @@ const HomePage = () => {
       <motion.div
         initial="hide"
         whileInView="show"
- viewport={{ once: true }}
+        viewport={{ once: true }}
         variants={b_t_animation}
         className="flex items-center justify-center mt-[-150px] lg:mt-[-300px]"
       >
@@ -54,19 +66,47 @@ const HomePage = () => {
       </motion.div>
 
       {/* Joint Venture portion */}
-      <motion.div      
+      <motion.div
         initial="hide"
         whileInView="show"
- viewport={{ once: true }}
+        viewport={{ once: true }}
         variants={b_t_animation}
         className="flex flex-col items-center justify-center "
       >
-        <h4 className="font-bold text-4xl">Joint Venture</h4>
+        <h4 className="text-3xl">
+          It is a joint effort of{" "}
+          <span className="font-bold">Dayim Marketing</span> and{" "}
+          <span className="font-bold">Global Bussiness Concern</span>
+        </h4>
         <div className="flex flex-col lg:flex-row gap-10 items-center justify-center pb-20 mt-20">
           <img src="/images/client2.png" alt="" className="h-[80px]" />
-          <img src="/images/client1.png" alt="" className="h-[80px]" />        
+          <img src="/images/client1.png" alt="" className="h-[80px]" />
         </div>
+      </motion.div>
 
+      {/* Ready to get started section */}
+      <motion.div
+        initial="hide"
+        whileInView="show"
+        viewport={{ once: true }}
+        variants={b_t_animation}
+        className="bg-[url('/images/Mask2.png')] h-[450px] bg-cover bg-no-repeat bg-bottom p-5"
+      >
+        <div className="flex flex-col items-center justify-center gap-8 text-white mt-14">
+          <h2 className="font-bold text-4xl">
+            Get Started with RealSolutions Today!
+          </h2>
+          <p className="lg:w-[50%] text-center">
+            Sign up for a demo or contact our expert team for more information.
+            Your next big project deserves the best digital partner.
+          </p>
+          <Link
+            href="#inquirySection"
+            className="bg-yellow-500 py-3 px-8 text-white rounded-md hover:bg-opacity-80"
+          >
+            GET IT NOW
+          </Link>
+        </div>
       </motion.div>
 
       {/* Features Section */}
@@ -74,41 +114,40 @@ const HomePage = () => {
       <motion.div
         initial="hide"
         whileInView="show"
- viewport={{ once: true }}        
+        viewport={{ once: true }}
         variants={b_t_animation}
         className="bg-[#FBFCFE] flex flex-col items-center justify-center p-5 lg:p-20"
       >
-        <h2 className="font-bold text-4xl">Features</h2>
-        <p className="text-[#7E92AC] mt-5 lg:w-[500px] text-center text-sm">
-          Proin rhoncus, neque sed congue commodo, orci magna tristique ipsum,
-          vel egestas risus augue quis justo.
-        </p>
+        <h2 className="font-bold text-4xl">Why Choose RealSolutions?</h2>
+        {/* <p className="text-[#7E92AC] mt-5 lg:w-[500px] text-center text-sm">
+          Below are some of the features that we are providing
+        </p> */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16 mt-20">
-          <div className="py-10 px-10 bg-[#FFFFFF] hover:bg-white hover:shadow-lg rounded-lg flex flex-col items-start">
-            <img
-              src="/images/featuresicon1.png"
-              alt=""
-              className="h-[100px] ml-[-20px]"
-            />
-            <h4 className="font-bold text-xl">Customer Ledger</h4>
-            <p className="mt-5 text-[#7E92AC]">
-              Donec tempor finibus ante ac luctus. Fusce facilisis nisi. Donec
-              tempor finibus ante ac luctus. Fusce facilisis nisi tempor finibus
-              ante ac luctus facilisi.
-            </p>
-          </div>
-
           <div className="py-10 px-10 bg-[#FFFFFF] hover:bg-white hover:shadow-lg rounded-lg flex flex-col items-start">
             <img
               src="/images/featuresicon2.png"
               alt=""
               className="h-[100px] ml-[-20px]"
             />
-            <h4 className="font-bold text-xl">Project Webpages</h4>
+            <h4 className="font-bold text-xl">Real Estate-Centric</h4>
             <p className="mt-5 text-[#7E92AC]">
-              Donec tempor finibus ante ac luctus. Fusce facilisis nisi. Donec
-              tempor finibus ante ac luctus. Fusce facilisis nisi tempor finibus
-              ante ac luctus facilisi.
+              Unlike generic platforms, RealSolutions is made specifically for
+              the real estate industry. This means every tool, every feature is
+              tailored to your needs.
+            </p>
+          </div>
+
+          <div className="py-10 px-10 bg-[#FFFFFF] hover:bg-white hover:shadow-lg rounded-lg flex flex-col items-start">
+            <img
+              src="/images/featuresicon1.png"
+              alt=""
+              className="h-[100px] ml-[-20px]"
+            />
+            <h4 className="font-bold text-xl">Developed by Experts</h4>
+            <p className="mt-5 text-[#7E92AC]">
+              Who knows real estate developers better than fellow developers?
+              We've been in your shoes, and we've designed this platform to
+              address every challenge we've faced.
             </p>
           </div>
 
@@ -118,11 +157,11 @@ const HomePage = () => {
               alt=""
               className="h-[100px] ml-[-20px]"
             />
-            <h4 className="font-bold text-xl">Project Webpages</h4>
+            <h4 className="font-bold text-xl">All-in-One Solution</h4>
             <p className="mt-5 text-[#7E92AC]">
-              Donec tempor finibus ante ac luctus. Fusce facilisis nisi. Donec
-              tempor finibus ante ac luctus. Fusce facilisis nisi tempor finibus
-              ante ac luctus facilisi.
+              Why juggle multiple tools when you can have everything under one
+              roof? From marketing to customer management, we've packed
+              everything you need in one intuitive platform.
             </p>
           </div>
         </div>
@@ -132,7 +171,7 @@ const HomePage = () => {
       <motion.div
         initial="hide"
         whileInView="show"
- viewport={{ once: true }}        
+        viewport={{ once: true }}
         variants={b_t_animation}
         className="bg-white flex flex-col md:flex-row items-center justify-center p-5 lg:p-20 gap-10 "
       >
@@ -142,34 +181,16 @@ const HomePage = () => {
           className="md:w-[350px] lg:w-[600px] object-cover"
         />
         <div className=" space-y-5">
-          <h4 className="text-3xl font-bold">Perfect Solution</h4>
+          <h4 className="text-3xl font-bold">Company Website Creation</h4>
           <p className="lg:w-[450px] pb-10">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus dui
-            orci, sodales a pellentesque vel, pharetra quis elit. In scelerisque
-            lacinia diam eget egestas. Etiam non dui eu felis vestibulum.
+            Showcase your brand with a sleek, modern website that resonates with
+            your target audience. No technical knowledge needed.
           </p>
-          
-          <Link href="#inquirySection" className="bg-yellow-500 py-3 px-8 text-white rounded-md hover:bg-opacity-80 ">
-            GET IT NOW
-          </Link>
-        </div>
-      </motion.div>
 
-      {/* Ready to get started section */}
-      <motion.div
-        initial="hide"
-        whileInView="show"
- viewport={{ once: true }}
-        variants={b_t_animation}
-        className="bg-[url('/images/Mask2.png')] h-[450px] bg-cover bg-no-repeat bg-bottom p-5"
-      >
-        <div className="flex flex-col items-center justify-center gap-8 text-white mt-14">
-          <h2 className="font-bold text-4xl">Ready to Get Started</h2>
-          <p className="lg:w-[50%] text-center">
-            Donec tempor finibus ante ac luctus. Fusce facilisis nisi vel odio
-            tincidunt maximus. Pellentesque tempus gravida viverra.
-          </p>
-          <Link href="#inquirySection" className="bg-yellow-500 py-3 px-8 text-white rounded-md hover:bg-opacity-80">
+          <Link
+            href="#inquirySection"
+            className="bg-yellow-500 py-3 px-8 text-white rounded-md hover:bg-opacity-80 "
+          >
             GET IT NOW
           </Link>
         </div>
@@ -179,87 +200,45 @@ const HomePage = () => {
       <motion.div
         initial="hide"
         whileInView="show"
- viewport={{ once: true }}
+        viewport={{ once: true }}
         variants={b_t_animation}
         className=" py-20"
       >
         <div className="w-[90%] lg:w-[80%] mx-auto flex flex-col-reverse md:flex-row items-center justify-center gap-10">
           <div className="">
-            <h4 className="font-bold text-3xl mb-5">Easily Inventory</h4>
+            <h4 className="font-bold text-3xl mb-5">Online Payments</h4>
             <div className="flex items-center">
               <img src="/images/tick.png" alt="" />
               <p className="lg:w-[400px] mt-[-20px]">
-                Sodales a pellentesque vel, pharetra quis elit. In scelerisque
-                lacinia diam eget egestas.
+                <span className="font-bold">Effortless Transactions:</span>{" "}
+                Simplify the payment process for real estate transactions.
               </p>
             </div>
             <div className="flex items-center">
               <img src="/images/tick.png" alt="" />
               <p className="lg:w-[400px] mt-[-20px]">
-                Sodales a pellentesque vel, pharetra quis elit. In scelerisque
-                lacinia diam eget egestas.
+                <span className="font-bold">Secure and Fast:</span> Ensure the
+                safety and speed of financial transactions.
               </p>
             </div>
             <div className="flex items-center pb-10">
               <img src="/images/tick.png" alt="" />
               <p className="lg:w-[400px] mt-[-20px]">
-                Sodales a pellentesque vel, pharetra quis elit. In scelerisque
-                lacinia diam eget egestas.
+                <span className="font-bold">Tailored Payment Options:</span>{" "}
+                Customized payment solutions designed specifically for the real
+                estate industry.
               </p>
             </div>
-            <Link href="#inquirySection" className="bg-yellow-500 py-3 px-8 text-white rounded-md hover:bg-opacity-80">
+            <Link
+              href="#inquirySection"
+              className="bg-yellow-500 py-3 px-8 text-white rounded-md hover:bg-opacity-80"
+            >
               GET IT NOW
             </Link>
           </div>
-          <img
-            src="/images/easilyInventory.png"
-            alt=""
-            className="md:w-[350px] lg:w-[600px]"
-          />
-        </div>
-      </motion.div>
-
-      {/* Company Website Section */}
-      <motion.div
-        initial="hide"
-        whileInView="show"
- viewport={{ once: true }}
-        variants={b_t_animation}
-        className=" py-20 bg-[#FBFCFE]"
-      >
-        <div className="w-[90%] lg:w-[80%] mx-auto flex flex-col-reverse md:flex-row items-center justify-center gap-10">
-          <div className="">
-            <h4 className="font-bold text-3xl mb-5">Company Website</h4>
-            <div className="flex items-center">
-              <img src="/images/tick.png" alt="" />
-              <p className="lg:w-[400px] mt-[-20px]">
-                Sodales a pellentesque vel, pharetra quis elit. In scelerisque
-                lacinia diam eget egestas.
-              </p>
-            </div>
-            <div className="flex items-center">
-              <img src="/images/tick.png" alt="" />
-              <p className="lg:w-[400px] mt-[-20px]">
-                Sodales a pellentesque vel, pharetra quis elit. In scelerisque
-                lacinia diam eget egestas.
-              </p>
-            </div>
-            <div className="flex items-center pb-10">
-              <img src="/images/tick.png" alt="" />
-              <p className="lg:w-[400px] mt-[-20px]">
-                Sodales a pellentesque vel, pharetra quis elit. In scelerisque
-                lacinia diam eget egestas.
-              </p>
-            </div>
-            <Link href="#inquirySection" className="bg-yellow-500 py-3 px-8 text-white rounded-md hover:bg-opacity-80">
-              GET IT NOW
-            </Link>
+          <div className="lg:w-[40%]">
+            <LottieAnimation animationData={OnlinePayments} />
           </div>
-          <img
-            src="/images/CompanyWebsite.png"
-            alt=""
-            className="md:w-[350px] lg:w-[600px]"
-          />
         </div>
       </motion.div>
 
@@ -267,35 +246,41 @@ const HomePage = () => {
       <motion.div
         initial="hide"
         whileInView="show"
- viewport={{ once: true }}
+        viewport={{ once: true }}
         variants={b_t_animation}
         className=" py-20 bg-white"
       >
         <div className="w-[90%] lg:w-[80%] mx-auto flex flex-col-reverse md:flex-row items-center justify-center gap-10">
           <div className="">
-            <h4 className="font-bold text-3xl mb-5">Project Webpages</h4>
+            <h4 className="font-bold text-3xl mb-5">
+              Real Estate Project Pages
+            </h4>
             <div className="flex items-center">
               <img src="/images/tick.png" alt="" />
               <p className="lg:w-[400px] mt-[-20px]">
-                Sodales a pellentesque vel, pharetra quis elit. In scelerisque
-                lacinia diam eget egestas.
+                Thoroughly document each project, covering its journey from
+                initial concepts to the ultimate sale.
               </p>
             </div>
             <div className="flex items-center">
               <img src="/images/tick.png" alt="" />
               <p className="lg:w-[400px] mt-[-20px]">
-                Sodales a pellentesque vel, pharetra quis elit. In scelerisque
-                lacinia diam eget egestas.
+                Utilize user-friendly layouts that make it easy for stakeholders
+                to access and understand project details.
               </p>
             </div>
-            <div className="flex items-center pb-10" >
+            <div className="flex items-center pb-10">
               <img src="/images/tick.png" alt="" />
               <p className="lg:w-[400px] mt-[-20px]">
-                Sodales a pellentesque vel, pharetra quis elit. In scelerisque
-                lacinia diam eget egestas.
+                Enhance project descriptions with dynamic visuals, such as
+                images, videos, and interactive content, to provide a richer and
+                more engaging experience.
               </p>
             </div>
-            <Link href="#inquirySection" className="bg-yellow-500 py-3 px-8 text-white rounded-md hover:bg-opacity-80">
+            <Link
+              href="#inquirySection"
+              className="bg-yellow-500 py-3 px-8 text-white rounded-md hover:bg-opacity-80"
+            >
               GET IT NOW
             </Link>
           </div>
@@ -307,40 +292,44 @@ const HomePage = () => {
         </div>
       </motion.div>
 
-
       {/* Customer Notifacations Section */}
       <motion.div
         initial="hide"
         whileInView="show"
- viewport={{ once: true }}
+        viewport={{ once: true }}
         variants={b_t_animation}
         className=" py-20 bg-[#FBFCFE]"
       >
         <div className="w-[90%] lg:w-[80%] mx-auto flex flex-col-reverse md:flex-row items-center justify-center gap-10">
           <div className="">
-            <h4 className="font-bold text-3xl mb-5">Customer Notifacations</h4>
+            <h4 className="font-bold text-3xl mb-5">
+              Automated Customer Notifications
+            </h4>
             <div className="flex items-center">
               <img src="/images/tick.png" alt="" />
               <p className="lg:w-[400px] mt-[-20px]">
-                Sodales a pellentesque vel, pharetra quis elit. In scelerisque
-                lacinia diam eget egestas.
+                Establish effortless communication channels to interact with
+                your customers.
               </p>
             </div>
             <div className="flex items-center">
               <img src="/images/tick.png" alt="" />
               <p className="lg:w-[400px] mt-[-20px]">
-                Sodales a pellentesque vel, pharetra quis elit. In scelerisque
-                lacinia diam eget egestas.
+                Implement automated notification systems to keep customers
+                informed throughout the entire process.
               </p>
             </div>
             <div className="flex items-center pb-10">
               <img src="/images/tick.png" alt="" />
               <p className="lg:w-[400px] mt-[-20px]">
-                Sodales a pellentesque vel, pharetra quis elit. In scelerisque
-                lacinia diam eget egestas.
+                Provide customers with timely updates at each stage of their
+                journey, enhancing their experience and trust in your services.
               </p>
             </div>
-            <Link href="#inquirySection" className="bg-yellow-500 py-3 px-8 text-white rounded-md hover:bg-opacity-80">
+            <Link
+              href="#inquirySection"
+              className="bg-yellow-500 py-3 px-8 text-white rounded-md hover:bg-opacity-80"
+            >
               GET IT NOW
             </Link>
           </div>
@@ -354,35 +343,38 @@ const HomePage = () => {
       <motion.div
         initial="hide"
         whileInView="show"
- viewport={{ once: true }}
+        viewport={{ once: true }}
         variants={b_t_animation}
         className=" py-20 bg-white"
       >
         <div className="w-[90%] lg:w-[80%] mx-auto flex flex-col-reverse md:flex-row items-center justify-center gap-10">
           <div className="">
-            <h4 className="font-bold text-3xl mb-5">Digital Marketing</h4>
+            <h4 className="font-bold text-3xl mb-5">Digital Marketing Tools</h4>
             <div className="flex items-center">
               <img src="/images/tick.png" alt="" />
               <p className="lg:w-[400px] mt-[-20px]">
-                Sodales a pellentesque vel, pharetra quis elit. In scelerisque
-                lacinia diam eget egestas.
+                Boost your online presence and expand your audience with a suite
+                of potent marketing tools.
               </p>
             </div>
             <div className="flex items-center">
               <img src="/images/tick.png" alt="" />
               <p className="lg:w-[400px] mt-[-20px]">
-                Sodales a pellentesque vel, pharetra quis elit. In scelerisque
-                lacinia diam eget egestas.
+                Implement effective search engine optimization strategies to
+                improve your website's visibility in search results.
               </p>
             </div>
             <div className="flex items-center pb-10">
               <img src="/images/tick.png" alt="" />
               <p className="lg:w-[400px] mt-[-20px]">
-                Sodales a pellentesque vel, pharetra quis elit. In scelerisque
-                lacinia diam eget egestas.
+                Seamlessly integrate with social media platforms to leverage
+                their reach and engage with your target audience effectively.
               </p>
             </div>
-            <Link href="#inquirySection" className="bg-yellow-500 py-3 px-8 text-white rounded-md hover:bg-opacity-80">
+            <Link
+              href="#inquirySection"
+              className="bg-yellow-500 py-3 px-8 text-white rounded-md hover:bg-opacity-80"
+            >
               GET IT NOW
             </Link>
           </div>
@@ -396,35 +388,40 @@ const HomePage = () => {
       <motion.div
         initial="hide"
         whileInView="show"
- viewport={{ once: true }}
+        viewport={{ once: true }}
         variants={b_t_animation}
         className=" py-20 bg-[#FBFCFE]"
       >
         <div className="w-[90%] lg:w-[80%] mx-auto flex flex-col-reverse md:flex-row items-center justify-center gap-10">
           <div className="">
-            <h4 className="font-bold text-3xl mb-5">Customers Ledger</h4>
+            <h4 className="font-bold text-3xl mb-5">
+              Customer Ledger Maintenance
+            </h4>
             <div className="flex items-center">
               <img src="/images/tick.png" alt="" />
               <p className="lg:w-[400px] mt-[-20px]">
-                Sodales a pellentesque vel, pharetra quis elit. In scelerisque
-                lacinia diam eget egestas.
+                Simplify financial processes by streamlining customer
+                transactions and balances.
               </p>
             </div>
             <div className="flex items-center">
               <img src="/images/tick.png" alt="" />
               <p className="lg:w-[400px] mt-[-20px]">
-                Sodales a pellentesque vel, pharetra quis elit. In scelerisque
-                lacinia diam eget egestas.
+                Keep a close eye on customer transactions, ensuring accuracy and
+                transparency.
               </p>
             </div>
             <div className="flex items-center pb-10">
               <img src="/images/tick.png" alt="" />
               <p className="lg:w-[400px] mt-[-20px]">
-                Sodales a pellentesque vel, pharetra quis elit. In scelerisque
-                lacinia diam eget egestas.
+                Easily access and manage the complete financial histories of
+                your customers for better record-keeping and analysis.
               </p>
             </div>
-            <Link href="#inquirySection" className="bg-yellow-500 py-3 px-8 text-white rounded-md hover:bg-opacity-80">
+            <Link
+              href="#inquirySection"
+              className="bg-yellow-500 py-3 px-8 text-white rounded-md hover:bg-opacity-80"
+            >
               GET IT NOW
             </Link>
           </div>
@@ -438,35 +435,38 @@ const HomePage = () => {
       <motion.div
         initial="hide"
         whileInView="show"
- viewport={{ once: true }}
+        viewport={{ once: true }}
         variants={b_t_animation}
         className=" py-20 bg-white"
       >
         <div className="w-[90%] lg:w-[80%] mx-auto flex flex-col-reverse md:flex-row items-center justify-center gap-10">
           <div className="">
-            <h4 className="font-bold text-3xl mb-5">Real Estate Inventory</h4>
+            <h4 className="font-bold text-3xl mb-5">Inventory Management</h4>
             <div className="flex items-center">
               <img src="/images/tick.png" alt="" />
               <p className="lg:w-[400px] mt-[-20px]">
-                Sodales a pellentesque vel, pharetra quis elit. In scelerisque
-                lacinia diam eget egestas.
+                Access up-to-the-minute updates on your property listings,
+                allowing you to stay informed at all times.
               </p>
             </div>
             <div className="flex items-center">
               <img src="/images/tick.png" alt="" />
               <p className="lg:w-[400px] mt-[-20px]">
-                Sodales a pellentesque vel, pharetra quis elit. In scelerisque
-                lacinia diam eget egestas.
+                Quickly distinguish between available, pending, and sold
+                properties with a convenient at-a-glance view.
               </p>
             </div>
             <div className="flex items-center pb-10">
               <img src="/images/tick.png" alt="" />
               <p className="lg:w-[400px] mt-[-20px]">
-                Sodales a pellentesque vel, pharetra quis elit. In scelerisque
-                lacinia diam eget egestas.
+                Enable informed decision-making by staying ahead of the curve
+                with the latest property status updates.
               </p>
             </div>
-            <Link href="#inquirySection" className="bg-yellow-500 py-3 px-8 text-white rounded-md hover:bg-opacity-80">
+            <Link
+              href="#inquirySection"
+              className="bg-yellow-500 py-3 px-8 text-white rounded-md hover:bg-opacity-80"
+            >
               GET IT NOW
             </Link>
           </div>
@@ -494,28 +494,29 @@ const HomePage = () => {
       <motion.div
         initial="hide"
         whileInView="show"
- viewport={{ once: true }}
+        viewport={{ once: true }}
         variants={b_t_animation}
         className="bg-[#FBFCFE] flex flex-col items-center justify-center p-5 lg:p-20"
       >
         <h2 className="font-bold text-4xl">Frequently Asked Questions</h2>
-        <p className="text-[#7E92AC] mt-5 lg:w-[500px] text-center text-sm">
+        {/* <p className="text-[#7E92AC] mt-5 lg:w-[500px] text-center text-sm">
           Donec augue lorem, mollis quis dui sed, dictum vehicula turpis.
           Aliquam bibendum vel mi id tempor. Sed efficitur scelerisque mi.
           Nullam posuere nec ex in malesuada.
-        </p>
+        </p> */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 mt-20 md:px-10">
           <div className="flex">
             <img src="/images/questionMark.png" alt="" className="h-[100px]" />
             <div>
               <h4 className="font-bold text-xl">
-                Fusce Sodales Placerat Nibh Eget ?
+                What makes RealTrack different from other web application
+                platforms?
               </h4>
               <p className="text-[#7E92AC] text-sm mt-3">
-                Duis sagittis orci non risus semper feugiat. Fusce ullamcorper
-                sollicitudin velit et pretium. Ut quis orci sed dolor accumsan
-                ultrices. Nunc ut ornare tellus. Nulla ut eros non lorem rhoncus
-                blandit.
+                RealTrack is specifically tailored for the real estate industry.
+                Designed by real estate developers, it integrates every tool and
+                feature a developer might need, eliminating the need for
+                multiple platforms or third-party tools.
               </p>
             </div>
           </div>
@@ -524,13 +525,12 @@ const HomePage = () => {
             <img src="/images/questionMark.png" alt="" className="h-[100px]" />
             <div>
               <h4 className="font-bold text-xl">
-                Fusce Sodales Placerat Nibh Eget ?
+                Do I need any technical knowledge to set up my company website?
               </h4>
               <p className="text-[#7E92AC] text-sm mt-3">
-                Duis sagittis orci non risus semper feugiat. Fusce ullamcorper
-                sollicitudin velit et pretium. Ut quis orci sed dolor accumsan
-                ultrices. Nunc ut ornare tellus. Nulla ut eros non lorem rhoncus
-                blandit.
+                Absolutely not! Our platform is user-friendly, and you can
+                easily set up your website with our guided process. If you ever
+                run into any issues, our support team is always here to help.
               </p>
             </div>
           </div>
@@ -539,13 +539,12 @@ const HomePage = () => {
             <img src="/images/questionMark.png" alt="" className="h-[100px]" />
             <div>
               <h4 className="font-bold text-xl">
-                Fusce Sodales Placerat Nibh Eget ?
+                How secure is the online payment feature?
               </h4>
               <p className="text-[#7E92AC] text-sm mt-3">
-                Duis sagittis orci non risus semper feugiat. Fusce ullamcorper
-                sollicitudin velit et pretium. Ut quis orci sed dolor accumsan
-                ultrices. Nunc ut ornare tellus. Nulla ut eros non lorem rhoncus
-                blandit.
+                Security is our utmost priority. Our online payment gateway uses
+                industry-leading encryption and security protocols to ensure
+                that every transaction is protected and secure.
               </p>
             </div>
           </div>
@@ -554,13 +553,13 @@ const HomePage = () => {
             <img src="/images/questionMark.png" alt="" className="h-[100px]" />
             <div>
               <h4 className="font-bold text-xl">
-                Fusce Sodales Placerat Nibh Eget ?
+                Can I integrate RealTrack with my existing CRM or other tools?*
               </h4>
               <p className="text-[#7E92AC] text-sm mt-3">
-                Duis sagittis orci non risus semper feugiat. Fusce ullamcorper
-                sollicitudin velit et pretium. Ut quis orci sed dolor accumsan
-                ultrices. Nunc ut ornare tellus. Nulla ut eros non lorem rhoncus
-                blandit.
+                Yes, RealTrack is designed to be flexible. We offer various
+                integration options with popular CRMs and other business tools.
+                If you have specific integration needs, please reach out to our
+                team for assistance.
               </p>
             </div>
           </div>
@@ -569,13 +568,14 @@ const HomePage = () => {
             <img src="/images/questionMark.png" alt="" className="h-[100px]" />
             <div>
               <h4 className="font-bold text-xl">
-                Fusce Sodales Placerat Nibh Eget ?
+                How does the customer notification system work?
               </h4>
               <p className="text-[#7E92AC] text-sm mt-3">
-                Duis sagittis orci non risus semper feugiat. Fusce ullamcorper
-                sollicitudin velit et pretium. Ut quis orci sed dolor accumsan
-                ultrices. Nunc ut ornare tellus. Nulla ut eros non lorem rhoncus
-                blandit.
+                Our automated customer notification system keeps your clients
+                informed about every step of their real estate journey, from
+                initial inquiries to final purchase details. You can customize
+                the frequency and type of notifications based on your
+                preferences.
               </p>
             </div>
           </div>
@@ -584,17 +584,79 @@ const HomePage = () => {
             <img src="/images/questionMark.png" alt="" className="h-[100px]" />
             <div>
               <h4 className="font-bold text-xl">
-                Fusce Sodales Placerat Nibh Eget ?
+                Is there a limit to the number of real estate project pages I
+                can create?
               </h4>
               <p className="text-[#7E92AC] text-sm mt-3">
-                Duis sagittis orci non risus semper feugiat. Fusce ullamcorper
-                sollicitudin velit et pretium. Ut quis orci sed dolor accumsan
-                ultrices. Nunc ut ornare tellus. Nulla ut eros non lorem rhoncus
-                blandit.
+                There is no hard limit. Our platform is designed to grow with
+                your business, allowing you to create as many project pages as
+                you need.
+              </p>
+            </div>
+          </div>
+
+          <div className="flex">
+            <img src="/images/questionMark.png" alt="" className="h-[100px]" />
+            <div>
+              <h4 className="font-bold text-xl">
+                Do you offer any digital marketing services or is it just tools?
+              </h4>
+              <p className="text-[#7E92AC] text-sm mt-3">
+                We have a team of marketing experts who specialize in the real
+                estate industry. Please contact us for more details if you're
+                interested in these services.
+              </p>
+            </div>
+          </div>
+
+          <div className="flex">
+            <img src="/images/questionMark.png" alt="" className="h-[100px]" />
+            <div>
+              <h4 className="font-bold text-xl">
+                How does the pricing work for RealTrack?
+              </h4>
+              <p className="text-[#7E92AC] text-sm mt-3">
+                Our pricing is structured based on the features you need. We
+                offer multiple packages to cater to different business sizes and
+                needs. For a detailed breakdown, please reach out to our sales
+                team.
+              </p>
+            </div>
+          </div>
+
+          <div className="flex">
+            <img src="/images/questionMark.png" alt="" className="h-[100px]" />
+            <div>
+              <h4 className="font-bold text-xl">
+                Can I get a custom demo tailored to my business needs?
+              </h4>
+              <p className="text-[#7E92AC] text-sm mt-3">
+                Absolutely! We offer personalized demos to prospective clients.
+                Sign up through our website, and one of our representatives will
+                be in touch to schedule a session.
+              </p>
+            </div>
+          </div>
+
+          <div className="flex">
+            <img src="/images/questionMark.png" alt="" className="h-[100px]" />
+            <div>
+              <h4 className="font-bold text-xl">Have more questions?</h4>
+              <p className="text-[#7E92AC] text-sm mt-3">
+                Don't hesitate to [Contact Us]! We're here to assist and ensure
+                you make the most out of RealTrack.
               </p>
             </div>
           </div>
         </div>
+
+        <Link
+            href="#inquirySection"
+            className="bg-yellow-500 py-3 px-8 text-white rounded-md hover:bg-opacity-80 mt-5"
+          >
+            CONTACT US
+          </Link>
+
       </motion.div>
 
       {/* Inquiry Section */}
@@ -602,13 +664,11 @@ const HomePage = () => {
       <motion.div
         initial="hide"
         whileInView="show"
- viewport={{ once: true }}
+        viewport={{ once: true }}
         variants={b_t_animation}
         className="p-5 md:p-20 flex flex-col items-center justify-center gap-5"
-        
-
       >
-        <h4 className="font-bold text-4xl" >Drop A Message For Inquiry</h4>
+        <h4 className="font-bold text-4xl">Drop A Message For Inquiry</h4>
         <p className="text-[#7E92AC] lg:w-[480px] text-center">
           Donec tempor finibus ante ac luctus. Fusce facilisis nisi vel odio
           tincidunt maximus. Pellentesque tempus gravida viverra.
@@ -644,7 +704,7 @@ const HomePage = () => {
       <motion.div
         initial="hide"
         whileInView="show"
- viewport={{ once: true }}
+        viewport={{ once: true }}
         variants={b_t_animation}
         className="bg-[url('/images/Mask3.png')] h-[450px] bg-cover bg-no-repeat bg-top p-5 flex items-end justify-center"
       >
@@ -654,7 +714,10 @@ const HomePage = () => {
             Donec tempor finibus ante ac luctus. Fusce facilisis nisi vel odio
             tincidunt maximus. Pellentesque tempus gravida viverra.
           </p>
-          <Link href="#inquirySection" className="bg-yellow-500 py-3 px-8 text-white rounded-md hover:bg-opacity-80">
+          <Link
+            href="#inquirySection"
+            className="bg-yellow-500 py-3 px-8 text-white rounded-md hover:bg-opacity-80"
+          >
             GET IT NOW
           </Link>
         </div>
