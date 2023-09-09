@@ -1,8 +1,8 @@
 import { NextRequest, NextResponse } from "next/server";
-import { connect } from "@/dbConfig/dbConfig";
 import Contact from "@/models/contactModel";
+import connectDB from "@/dbConfig/dbConfig";
 
-connect();
+connectDB();
 export async function GET(NextRequest){
     try {
         const contacts = await Contact.find(); 
