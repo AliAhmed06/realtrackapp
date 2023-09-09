@@ -27,7 +27,7 @@ const LeadsPage = async () => {
           </tr>
         </thead>
         <tbody>
-          {data?.map((item) => (
+          {data.map((item) => (
             <tr key={item._id}>
               <td>{item.name}</td>
               <td>{item.email}</td>
