@@ -1,20 +1,21 @@
 "use client";
-import Image from 'next/image';
-import Link from 'next/link';
-import { useEffect, useState } from 'react';
+import Image from "next/image";
+import Link from "next/link";
+import { useEffect, useState } from "react";
 
 import { usePathname } from "next/navigation";
 import { BiSolidChevronDown } from "react-icons/bi";
 import { AiFillCaretDown, AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 
-
-function NavBar({videoBg}) {
+function NavBar() {
   const [navbar, setNavbar] = useState(false);
   const [projectCaret, setProjectCaret] = useState(false);
   const [societiesCaret, setSocietiesCaret] = useState(false);
   const [aboutCaret, setAboutCaret] = useState(false);
 
-  {/* Get the current route */}
+  {
+    /* Get the current route */
+  }
   const pathname = usePathname();
 
   // Change Nav color on scroll
@@ -25,11 +26,11 @@ function NavBar({videoBg}) {
         setIsScroll(true);
       } else {
         setIsScroll(false);
-      } 
+      }
     };
     window.addEventListener("scroll", changeColor);
   }, []);
-  
+
   return (
     <div>
       <nav className={`w-full absolute top-0 left-0`}>
@@ -38,7 +39,7 @@ function NavBar({videoBg}) {
             <div className="flex items-center justify-between  md:block">
               {/* LOGO */}
               <Link href="/">
-                <img src="/images/logo.png" alt='' className='h-[110px] '  />
+                <img src="/images/logo.png" alt="" className="h-[110px] " />
               </Link>
               {/* HAMBURGER BUTTON FOR MOBILE */}
               <div className="md:hidden">
@@ -47,18 +48,18 @@ function NavBar({videoBg}) {
                   onClick={() => setNavbar(!navbar)}
                 >
                   {navbar ? (
-                    <AiOutlineClose size={40} className='text-second' />
+                    <AiOutlineClose size={40} className="text-second" />
                   ) : (
-                    <AiOutlineMenu size={40} className='text-second' />
+                    <AiOutlineMenu size={40} className="text-second" />
                   )}
                 </button>
               </div>
             </div>
           </div>
-          <div className=''>
+          <div className="">
             <div
               className={`flex-1 justify-self-center  pb-3 mt-8 md:block md:pb-0 md:mt-0 ${
-                navbar ? 'p-12 md:p-0 block' : 'hidden'
+                navbar ? "p-12 md:p-0 block" : "hidden"
               }`}
             >
               {/* <ul className="h-screen md:h-auto items-center justify-center md:flex  pt-2 ">                
@@ -100,8 +101,13 @@ function NavBar({videoBg}) {
               </ul> */}
             </div>
           </div>
-          <div className='hidden md:block'>
-            <Link href="#inquirySection" className='bg-[#5d32d2] py-2 px-5 rounded-md hover:bg-opacity-80 text-white'>Register</Link>
+          <div className="hidden md:block">
+            <Link
+              href="#inquirySection"
+              className="bg-[#5d32d2] py-2 px-5 rounded-md hover:bg-opacity-80 text-white"
+            >
+              Register
+            </Link>
           </div>
         </div>
       </nav>
